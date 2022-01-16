@@ -2,8 +2,6 @@ const { program } = require('commander');
 
 const contactsOperations = require('./contacts');
 
-// const argv = require('yargs').argv;
-
 async function invokeAction({ action, id, name, email, phone }) {
   switch (action) {
     case 'list':
@@ -40,7 +38,6 @@ program
 
 program.parse(process.argv);
 const options = program.opts();
-// console.log(options);
 
 invokeAction(options);
 

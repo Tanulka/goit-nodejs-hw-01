@@ -3,10 +3,8 @@ const path = require('path');
 const { v4 } = require('uuid');
 
 const contactsPath = path.join(__dirname, 'db/contacts.json');
-console.log(contactsPath);
-// TODO: задокументировать каждую функцию
+
 async function listContacts() {
-  console.log(contactsPath);
   const data = await fs.readFile(contactsPath, 'utf8');
   const contacts = JSON.parse(data);
   return contacts;
